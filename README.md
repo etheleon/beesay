@@ -1,6 +1,6 @@
 `ponysay` — cowsay reimplemention for ponies.
 
-![Derp](http://i.imgur.com/xOJbE.png)
+![Derp](https://i.imgur.com/n7RBf1Z.png)
 
 Today your terminal, tomorrow the world!
 
