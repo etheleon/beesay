@@ -1,0 +1,2 @@
+#!/bin/sh
+screenfetch -a /etc/update-motd.d/innermessage/logo.sh -d 'distro,kernel,uptime,cpu,mem' | lolcat
