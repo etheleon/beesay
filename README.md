@@ -151,3 +151,34 @@ PR for bugfixs and ponies (correctly builded) and we're still looking for bug fi
 release or pushes on the repository.
 
 The [PDF manual](//github.com/erkin/ponysay/blob/master/ponysay.pdf?raw=true) should answer most of your questions.
+
+```dockerfile
+# MOTD
+RUN apt install -y screenfetch
+
+WORKDIR /tmp
+RUN wget https://github.com/busyloop/lolcat/archive/master.zip && \
+                unzip master.zip && \
+    cd lolcat-master/bin && \
+    gem install lolcat
+
+RUN git clone https://github.com/honestbee/beesay.git /tmp/beesay
+WORKDIR /tmp/beesay
+
+RUN ./setup.py --without-info --freedom=partial install
+
+RUN mkdir /tmp/innermessage && \
+    cp /etc/update-motd.d/* /tmp/innermessage
+
+
+RUN rm -rf /etc/update-motd.d/* && \
+    cp -r /tmp/innermessage /etc/update-motd.d/innermessage && \
+    cp /tmp/beesay/extras/logo.sh /etc/update-motd.d/innermessage/ && \
+    cp /tmp/beesay/extras/05-screenfetch /etc/update-motd.d/innermessage/ && \
+    cp /tmp/beesay/extras/10-help-text /etc/update-motd.d/innermessage/ && \
+    echo '#!/bin/sh\nrun-parts /etc/update-motd.d/innermessage | lolcat -f | ponysay -f honestbee -W 300 --balloon round' | tee /etc/update-motd.d/50-ponysay && \
+    chmod +x /etc/update-motd.d/50-ponysay
+
+WORKDIR /
+
+```
