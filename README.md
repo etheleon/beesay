@@ -4,6 +4,7 @@
 
 Today your terminal, tomorrow the world!
 
+This is a fork of the ponysay with custom honestbee pixelart
 
 Dependencies
 ------------
