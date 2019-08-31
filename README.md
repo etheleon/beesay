@@ -4,7 +4,15 @@
 
 Today your terminal, tomorrow the world!
 
-This is a fork of the ponysay with custom honestbee pixelart
+This is a fork of the ponysay with custom pixelart (honestbee and airasia)
+
+How to create new pony
+----------
+
+1. Create PIXEL art (png format)
+2. Use [util-say](//github.com/maandree/util-say)
+3. Place output into ponies directory
+
 
 Dependencies
 ------------

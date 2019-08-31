@@ -21,6 +21,6 @@
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 printf "\n"
-printf " * Documentation:  https://github.com/honestbee/HB-Data-Science/tree/base\n"
-printf " * Management:     Honestbee Data Science\n"
-printf " * Support:        wesley DOT goi AT honestbee DOT com\n"
+printf " * Dockerfile:  https://github.com/etheleon/jupyterhub-k8s\n"
+printf " * Management:     AirAsia DataScience\n"
+printf " * Support:        wesleygoi [AT] airasia [DOT] com\n"
